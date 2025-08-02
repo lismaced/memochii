@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planos - MEMOCHII</title>
+    <link rel="stylesheet" href="../css/style1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+        .auth-container {
+            max-width: 500px;
+            margin: 80px auto;
+            padding: 40px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(85, 107, 47, 0.08);
+            border: 1px solid var(--gray);
+        }
+
+        .auth-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .auth-header h1 {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--gray);
+            border-radius: 6px;
+        }
+
+        .btn-auth {
+            width: 100%;
+            padding: 14px;
+            margin-top: 10px;
+        }
+
+        .password-container {
+            position: relative;
+        }
+
+        .password-toggle {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        .auth-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .error-message {
+            color: #d32f2f;
+            background-color: #fde7e9;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .suggestion-box {
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 20px;
+            border-left: 4px solid var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="../index.html" class="logo-container">
+                <div class="logo-image">
+                    <img src="../moochi-icon.png" alt="Moochi">
+                </div>
+                <div class="logo-text">Mochii</div>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="../index.html">QUEM SOMOS</a></li>
+                    <li><a href="planos.html" class="active">PLANOS</a></li>
+                    <li><a href="../recursos.html">RECURSOS</a></li>
+                    <li><a href="../blog.html">BLOG</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-outline">ENTRAR</a>
+                <a href="cadastro.html" class="btn btn-primary">CRIAR CONTA</a>
+            </div>
+        </header>
+
+        <div class="plans-header">
+            <h1>Encontre o plano perfeito para seus estudos</h1>
+            <p>Experimente gratuitamente ou escolha uma assinatura para acesso completo</p>
+        </div>
+
+        <div class="plans-container">
+            <!-- Plano Gratuito -->
+            <div class="plan-card free">
+                <h3>Básico</h3>
+                <div class="plan-price">R$0<small>/sempre</small></div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> Acesso a 5 resumos por mês</li>
+                    <li><i class="fas fa-check"></i> 20 flashcards básicos</li>
+                    <li><i class="fas fa-check"></i> 10 questões do banco</li>
+                    <li><i class="fas fa-check"></i> Suporte por e-mail</li>
+                </ul>
+                <a href="../pages/cadastro.html" class="btn btn-outline">Começar agora</a>
+            </div>
+
+            <!-- Plano Mensal -->
+            <div class="plan-card recommended">
+                <div class="plan-badge">MAIS POPULAR</div>
+                <h3>Mensal</h3>
+                <div class="plan-price">R$19,90<small>/mês</small></div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> Resumos ilimitados</li>
+                    <li><i class="fas fa-check"></i> Flashcards premium</li>
+                    <li><i class="fas fa-check"></i> Banco de questões completo</li>
+                    <li><i class="fas fa-check"></i> Análise de redação (2 por mês)</li>
+                    <li><i class="fas fa-check"></i> Suporte prioritário</li>
+                </ul>
+                <a href="../cadastro.html?plano=mensal" class="btn btn-primary">Assinar mensalmente</a>
+            </div>
+
+            <!-- Plano Anual -->
+            <div class="plan-card annual">
+                <div class="plan-badge">MELHOR CUSTO-BENEFÍCIO</div>
+                <h3>Anual</h3>
+                <div class="plan-price">R$179,90<small>/ano</small></div>
+                <div class="plan-savings">Economize 25% (equivalente a R$14,99/mês)</div>
+                <ul class="plan-features">
+                    <li><i class="fas fa-check"></i> Todos os benefícios do mensal</li>
+                    <li><i class="fas fa-check"></i> +5 análises de redação por mês</li>
+                    <li><i class="fas fa-check"></i> Acesso a materiais exclusivos</li>
+                    <li><i class="fas fa-check"></i> Webinars mensais</li>
+                    <li><i class="fas fa-check"></i> Certificado de produtividade</li>
+                </ul>
+                <a href="../cadastro.html?plano=anual" class="btn btn-primary">Assinar anualmente</a>
+            </div>
+        </div>
+
+        <div class="plan-comparison">
+            <h2>Comparação completa de planos</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Recurso</th>
+                        <th>Básico</th>
+                        <th>Mensal</th>
+                        <th>Anual</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Resumos de estudo</td>
+                        <td>5/mês</td>
+                        <td>Ilimitados</td>
+                        <td>Ilimitados</td>
+                    </tr>
+                    <tr>
+                        <td>Flashcards</td>
+                        <td>20 básicos</td>
+                        <td>Ilimitados</td>
+                        <td>Ilimitados</td>
+                    </tr>
+                    <tr>
+                        <td>Banco de questões</td>
+                        <td>10/mês</td>
+                        <td>Completo</td>
+                        <td>Completo</td>
+                    </tr>
+                    <tr>
+                        <td>Análise de redação</td>
+                        <td>com ia</td>
+                        <td>monitor</td>
+                        <td>monitor</td>
+                    </tr>
+                    <tr>
+                        <td>Suporte</td>
+                        <td>-</td>
+                        <td>chat privado</td>
+                        <td>chat privado</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>e muito mais!</p>
+        </div>
+
+        <footer class="footer">
+            <div class="social-links">
+                <a href="https://instagram.com/memochii" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://tiktok.com/@memochii" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Memochii. Todos os direitos reservados.
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
